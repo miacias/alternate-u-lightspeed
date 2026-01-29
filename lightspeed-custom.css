@@ -1,0 +1,156 @@
+/*
+CUSTOM CSS VARIABLES FOR LIGHTSPEED STORE
+Load this file after Lightspeed's base CSS to safely override styles.
+
+typography
+
+headers: russo one, (backup is authentic sans)
+text: roboto
+
+colors
+
+announcement background color: 38d9a9 (teal)
+header background color: 244892 (deep blue)
+header text color: white
+main background color: b3c3e2 (pale blue)
+main text color: 122648 (blue-black)
+locations section background color: 6084c8 (mid sky blue)
+locations section text color: white
+footer background color: 0a2249 (dark blue)
+footer text color: white
+product price text color on light background: 7f2f94 (purple)
+product price text color on dark background: cea2db (pale purple)
+product buy button color: D0731B (orange)
+*/
+
+:root {
+  /* Typography */
+  --font-family-title: "Russo One", "Authentic Sans", sans-serif;
+  --font-family-body: "Roboto", sans-serif;
+
+  /* Brand Colors */
+  --color-announcement-bg: #38d9a9;
+  --color-header-bg: #244892;
+  --color-header-text: #ffffff;
+  --color-main-bg: #b3c3e2;
+  --color-main-text: #122648;
+  --color-locations-bg: #6084c8;
+  --color-locations-text: #ffffff;
+  --color-footer-bg: #0a2249;
+  --color-footer-text: #ffffff;
+  --color-price-light: #7f2f94;
+  --color-price-dark: #cea2db;
+  --color-button: #d0731b;
+
+  /* Semantic Color Names */
+  --color-deep-blue: #244892;
+  --color-pale-blue: #b3c3e2;
+  --color-blue-black: #122648;
+  --color-dark-blue: #0a2249;
+  --color-purple: #7f2f94;
+  --color-pale-purple: #cea2db;
+  --color-orange: #d0731b;
+  --color-teal: #38d9a9;
+  --color-mid-sky-blue: #6084c8;
+  --color-white: #ffffff;
+}
+
+/* background pale blue, text blue-black */
+body,
+.ec-store,
+.ec-page {
+  background-color: var(--color-pale-blue);
+  color: var(--color-blue-black);
+}
+
+*:before,
+*:after {
+  border-color: var(--color-pale-blue);
+}
+
+/* item prices purple text */
+.ec-price-item {
+  color: var(--color-purple) !important;
+}
+
+/* main links orange and thick */
+a.ec-link {
+  color: var(--color-orange) !important;
+  font-weight: 800 !important;
+}
+
+/* paragraph links dark blue and thick */
+p a {
+  color: var(--color-deep-blue) !important;
+  font-weight: 800 !important;
+}
+
+/* link icons blue-black */
+.ec-footer *,
+.ec-footer a {
+  color: var(--color-blue-black) !important;
+}
+
+/* page section background color pale blue */
+#tile-product-details,
+#ecwid-products,
+.ec-grid,
+.ec-footer,
+.ec-store__content-wrapper,
+.ec-likely__wrapper * {
+  background-color: var(--color-pale-blue) !important;
+  color: var(--color-blue-black) !important;
+}
+
+/* product grid items
+- deep blue background color
+- rounded bottom corners
+- white text color
+- pale purple price text color
+ */
+.grid-product__wrap-inner {
+  background-color: var(--color-deep-blue) !important;
+  border-radius: 3% !important;
+}
+
+.grid-product__title-inner {
+  color: var(--color-white) !important;
+}
+
+.grid-product__price-value {
+  color: var(--color-pale-purple) !important;
+}
+
+/* see more fade-out color: deep blue */
+.ec-store .product-details-module__content--collapsed::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 72, 146, 0) 10%,
+    var(--color-deep-blue) 100%
+  ) !important;
+}
+
+/* titles thick font and blue-black */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title) !important;
+  color: var(--color-blue-black) !important;
+}
+
+/* "sold out" label orange */
+.label--attention,
+.label--attention * {
+  background-color: var(--color-orange) !important;
+}
+
+.label--attention::before {
+  border-top-color: var(--color-orange) !important;
+}
+
+.label--attention::after {
+  border-top-color: var(--color-orange) !important;
+}
