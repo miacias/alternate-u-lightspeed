@@ -20,7 +20,7 @@ footer background color: 0a2249 (dark blue)
 footer text color: white
 product price text color on light background: 7f2f94 (purple)
 product price text color on dark background: cea2db (pale purple)
-product buy button color: D0731B (orange)
+product buy button color: f76707 (orange)
 */
 
 :root {
@@ -40,7 +40,8 @@ product buy button color: D0731B (orange)
   --color-footer-text: #ffffff;
   --color-price-light: #7f2f94;
   --color-price-dark: #cea2db;
-  --color-button: #d0731b;
+  --color-button: #fd7e14;
+  --color-button-hover: #f76707;
 
   /* Semantic Color Names */
   --color-deep-blue: #244892;
@@ -49,7 +50,7 @@ product buy button color: D0731B (orange)
   --color-dark-blue: #0a2249;
   --color-purple: #7f2f94;
   --color-pale-purple: #cea2db;
-  --color-orange: #d0731b;
+  --color-orange: #fd7e14;
   --color-teal: #38d9a9;
   --color-mid-sky-blue: #6084c8;
   --color-white: #ffffff;
@@ -77,6 +78,14 @@ body,
 a.ec-link {
   color: var(--color-orange) !important;
   font-weight: 800 !important;
+}
+
+.form-control__button {
+  background-color: var(--color-button) !important;
+}
+
+.form-control__button:hover {
+  background-color: var(--color-button-hover) !important;
 }
 
 /* paragraph links dark blue and thick */
